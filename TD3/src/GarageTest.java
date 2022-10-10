@@ -9,9 +9,9 @@ import org.junit.jupiter.api.Test;
 
 public class GarageTest {
 
-/*
+
     @Test
-    public void firstCarByBrand() {
+    public void firstCarByBrand() throws Exception {
         Car car1 = new Car("BMW", "42abc75", 750000);
         Car car2 = new Car("Peugeot", "42abc75", 75000);
         Car car3 = new Car("Peugeot", "42abc75", 80000);
@@ -24,7 +24,7 @@ public class GarageTest {
     }
 
     @Test
-    public void firstCarByBrand2() {
+    public void firstCarByBrand2() throws Exception {
         Car car = new Car("Truc", "42abc75", 6000);
         Garage garage = new Garage();
         garage.add(car);
@@ -40,7 +40,7 @@ public class GarageTest {
 
 
     @Test
-    public void getPrice() {
+    public void getPrice() throws Exception {
         Car car1 = new Car("BMW", "42abc75", 750000);
         Car car2 = new Car("Peugeot", "42abc75", 75000);
         Garage garage = new Garage();
@@ -57,6 +57,6 @@ public class GarageTest {
         Garage garagen = new Garage();
         Garage garagen2 = new Garage();
         assertEquals(garagen.getId(), garagen2.getId()-1);
-    }*/
+    }
 
 }

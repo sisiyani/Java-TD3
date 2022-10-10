@@ -5,6 +5,10 @@ public class Bike extends Vehicule{
         super(brand,plate,100L,discount);
     }
 
+    public Bike(String brand) throws Exception {
+        super(brand,100L);
+    }
+
     public Bike(String brand,Discount discount) throws Exception {
         super(brand,100L,discount);
     }

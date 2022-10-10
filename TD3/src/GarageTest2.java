@@ -6,17 +6,17 @@ import org.junit.Test;
 
 public class GarageTest2 {
 
-/*
+
 
     //exo2
     @Test(expected=IllegalStateException.class)
-    public void garageRemoveNotExist() {
+    public void garageRemoveNotExist() throws Exception {
         Garage garage = new Garage();
         garage.remove(new Car("BMW", "42abc75", 20000));
     }
 
     @Test
-    public void garageAddRemove() {
+    public void garageAddRemove() throws Exception {
         Garage garage = new Garage();
         garage.add(new Car("Ford", "42abc75", 25000));
         garage.remove(new Car("Ford", "42abc75", 25000));
@@ -29,5 +29,5 @@ public class GarageTest2 {
         garage.firstCarByBrand(null);
     }
 
-*/
+
 }

@@ -1,10 +1,24 @@
 public abstract class Vehicule {
     private final String brand;
-    private final long value;
+    private  long value;
 
     private final String plate;
 
     private Discount discount;
+
+    protected Vehicule(String brand,long value) throws Exception {
+        if (value<0){
+            throw new IllegalArgumentException("The value cannot be negative\n");
+        }
+        if(brand==null){
+            throw new NullPointerException("The brand is null");
+        }
+
+        this.brand = brand;
+        this.plate=null;
+        this.value = value;
+        this.discount=null;
+    }
 
     protected Vehicule(String brand, String plate,long value) throws Exception {
         if (value<0){
@@ -95,10 +109,14 @@ public abstract class Vehicule {
 
     @Override
     public boolean equals(Object o){
-        if(o.getClass()!= Vehicule.class){
-            return false;
-        }
+
         Vehicule c=(Vehicule)o;
+        if(this.discount==null){
+            return this.getBrand().equals(c.getBrand()) && this.getValue()==c.getValue() && this.getPlate().equals(c.getPlate() );
+        }
+        if(this.plate==null){
+            return this.getBrand().equals(c.getBrand()) && this.getValue()==c.getValue() && this.getDiscount().equals(c.getDiscount());
+        }
         return this.getBrand().equals(c.getBrand()) && this.getValue()==c.getValue() && this.getPlate().equals(c.getPlate() )&& this.getDiscount().equals(c.getDiscount());
     }
 
@@ -114,6 +132,21 @@ public abstract class Vehicule {
     }
 
     public void setDiscount(Discount discount) {
-        this.discount = discount;
+        this.discount=discount;
+        this.value=this.discount.getValue();
+
     }
+
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + (this.getBrand().hashCode() );
+        result = prime * result + ((int)this.getValue());
+        result = prime * result + ((this.getDiscount() == null) ? 0 : this.getDiscount().getValue());
+        result = prime * result + ((this.getPlate() == null) ? 0 : this.getPlate().hashCode());
+        return result;
+    }
+
+
+
 }

@@ -5,15 +5,15 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class GarageTest3 {
-/*
+
     @Test(expected = IllegalStateException.class)
-    public void carRentalCarAndCamel2() {
+    public void carRentalCarAndCamel2() throws Exception {
         Garage garage = new Garage();
         garage.remove(new Bike("Cannondale"));
     }
 
     @Test
-    public void firstCarByBrand() {
+    public void firstCarByBrand() throws Exception {
         Vehicule v1 = new Car("BMW", "42abc75", 15000, null);	//car 15000e without discount
         Vehicule v2 = new Bike("Renault", null);
         Vehicule v3 = new Bike("Renault", null);
@@ -26,7 +26,7 @@ public class GarageTest3 {
     }
 
     @Test
-    public void getValue() {
+    public void getValue() throws Exception {
         Vehicule v1 = new Car("BMW", "42abc75", 15000, null);
         Bike v2 = new Bike("Renault", null);
         Garage garage = new Garage();
@@ -36,7 +36,7 @@ public class GarageTest3 {
     }
 
     @Test
-    public void findACarByBrand() {
+    public void findACarByBrand() throws Exception {
         Garage garage = new Garage();
         garage.add(new Car("Ford", "42abc75", 2020));
         garage.add(new Bike("Cannondale"));
@@ -45,7 +45,7 @@ public class GarageTest3 {
 
 
     @Test
-    public void findACarByModel2() {
+    public void findACarByModel2() throws Exception {
         Garage garage = new Garage();
         garage.add(new Car("Ford", "42abc75", 2020));
         garage.add(new Bike("Cannondale"));
@@ -55,12 +55,12 @@ public class GarageTest3 {
 
 
     @Test
-    public void protect() {
+    public void protect() throws Exception {
         Garage garage = new Garage();
         garage.add(new Car("Ford", "42abc75", 2020));
         garage.add(new Car("Ford", "412abc75", 2010));
         garage.add(new Car("Renault", "43abc75", 1910));
         garage.protectionism("Ford");
         assertEquals(garage.getValue(), 1910);
-    }*/
+    }
 }

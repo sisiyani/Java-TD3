@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class GarageTest4 {
 
-   /* @Test
+   @Test
     public void garageEquality() throws Exception {
         Garage garage1 = new Garage();
         Garage garage2 = new Garage();
@@ -33,5 +33,5 @@ public class GarageTest4 {
         garage2.add(bike2);
 
         assertEquals(garage1, garage2);
-    }*/
+    }
 }

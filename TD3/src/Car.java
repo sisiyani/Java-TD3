@@ -59,10 +59,21 @@ public class Car extends Vehicule{
             return false;
         }
         Car c=(Car)o;
+        System.out.println(super.equals(o));
         return super.equals(o) && this.getVetuste()==c.getVetuste();
     }
 
-
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + (this.getBrand().hashCode() );
+        result = prime * result + ((int)this.getValue());
+        result = prime * result + this.vetuste;
+        result = prime * result + ((this.getDiscount() == null) ? 0 : this.getDiscount().getValue());
+        result = prime * result + ((this.getPlate() == null) ? 0 : this.getPlate().hashCode());
+        return result;
+    }
 
 
 }

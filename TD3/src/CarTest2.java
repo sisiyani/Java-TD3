@@ -40,6 +40,7 @@ public class CarTest2 {
         Car car2 = new Car("BMW", "42abc75", 15000);
         HashSet<Car> set = new HashSet<>();
         set.add(car1);
+
         assertTrue(set.contains(car2));
     }
 
